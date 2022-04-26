@@ -2,37 +2,63 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The maximum numbers of states that a counter with six flip-flops can count are",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "6",
+        "b": "8",
+        "c": "64",
+        "d": "256"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The maximum numbers of flip-flops required for a mod 10 ripple counter are",
+      "answers": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "10"
       },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The number of states in decade counter is",
+      "answers": {
+        "a": "20",
+        "b": "15",
+        "c": "5",
+        "d": "10"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Flip-flop is used to store",
+      "answers": {
+        "a": "one bit information",
+        "b": "two bits information",
+        "c": "one byte of information",
+        "d": "none of the above"
+      },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Any sequential circuit that goes through a prescribed sequence of states up to application of input pulses is called as",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "counter",
+        "b": "flip-flop",
+        "c": "register",
+        "d": "a and c"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
+      
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
