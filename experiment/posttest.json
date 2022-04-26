@@ -2,37 +2,63 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The type of register in which data is entered into it only one bit at a time but all data bits available at the output is",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Parallel in serial out",
+        "b": "Serial in serial out",
+        "c": "Parallel in Parallel out",
+        "d": "Serial in parallel out"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The type of register in which we have access only to left most and right most flip-flop is",
+      "answers": {
+        "a": "Serial in serial out register",
+        "b": "Shift left and shift right register",
+        "c": "Serial in parallel out register",
+        "d": "Shift left register"
       },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "A universal register is",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Accept serial input",
+        "b": "Accept parallel input",
+        "c": "Gives serial and parallel output",
+        "d": "Is capable of all the input"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The ripple counter is",
+      "answers": {
+        "a": "Decade counter",
+        "b": "Synchronous sequential circuit",
+        "c": "Asynchronous sequential circuit",
+        "d": "All above"
       },
+      
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The number of flip-flops required for mod 16 ring counter are",
+      "answers": {
+        "a": "4",
+        "b": "8",
+        "c": "12",
+        "d": "16"
+      },
+      
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]
