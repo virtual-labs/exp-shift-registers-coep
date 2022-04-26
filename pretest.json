@@ -1,0 +1,65 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "The maximum numbers of states that a counter with six flip-flops can count are",
+      "answers": {
+        "a": "6",
+        "b": "8",
+        "c": "64",
+        "d": "256"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The maximum numbers of flip-flops required for a mod 10 ripple counter are",
+      "answers": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "10"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The number of states in decade counter is",
+      "answers": {
+        "a": "20",
+        "b": "15",
+        "c": "5",
+        "d": "10"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Flip-flop is used to store",
+      "answers": {
+        "a": "one bit information",
+        "b": "two bits information",
+        "c": "one byte of information",
+        "d": "none of the above"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Any sequential circuit that goes through a prescribed sequence of states up to application of input pulses is called as",
+      "answers": {
+        "a": "counter",
+        "b": "flip-flop",
+        "c": "register",
+        "d": "a and c"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	This is a jQuery Tools standalone demo. Feel free to copy/paste.
+	                                                         
+	http://flowplayer.org/tools/demos/
+	
+	Do *not* reference CSS files and images from flowplayer.org when in production  
+
+	Enjoy!
+-->
+
+<head>
+	<title>Hybrid Lab Demo</title>
+ <meta name="viewport" content="width=device-width, user-scalable=no" />
+	<!-- include the Tools -->
+		<script type="text/javascript" src="js/jquery.js"> </script>
+		
+		<script type="text/javascript" src="js/jquery.tools.min1.js"></script>
+		<link   type="text/css"  rel="stylesheet"  href="css/example.css"  />		
+		<script type="text/javascript" src = "js/example.js"></script>
+		<script type="text/javascript" src="js/raphael.js"></script>
+		<script type="text/javascript" src="js/jquery.flot.js"></script>
+		<script type="text/javascript" src="js/utility.js"></script>
+	<!--		<script type="text/javascript" src="js/monostable.js"></script>-->
+		
+	
+	<!-- tab styling -->
+		<link   type="text/css"  rel="stylesheet"  href="css/tabs.css"  />
+	
+	
+	<!-- tab pane styling -->
+	<style>
+	div.wrap {
+		<!-- width:700px;
+		margin-bottom:40px; -->
+	}
+	
+	.wrap .pane  {	
+		background:#fff repeat-x 0 20px;
+		display:none;		
+		padding:20px;
+		border:1px solid #999;
+		border-top:0;
+		font-size:14px;	 
+		font-size:18px;
+		color:#456;	
+		padding-bottom: 20px;
+    padding-left: 9px;
+    padding-right: 20px;
+    padding-top: 11px;
+		
+		_background-image:none;
+	}
+	
+	.wrap .pane p {
+		font-size:38px;	
+		margin:-10px 0 -20px 0;	
+		text-align:right;
+		color:#578;
+	}
+	#header{
+	top:2px;
+	left:2px;
+	position:relative;
+	border:2px groove  #c4c4c4;
+	width:100%;
+	height:130px;
+	overflow:auto;
+}
+.imag{width:100%}
+	.imag1{position:absolute;z-index:9999;left:1000px;top:85px;}
+	h3{font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    padding: 0;
+    color: #000;
+    margin: 10px 0;}
+	@media screen and (min-device-width: 1400px) and (max-device-width: 2000px) { 
+   #tabs{
+	box-shadow: 0 0 10px #000000;
+	margin: 0 auto;
+    width: 80%;
+	font-size: 10px;
+	height: auto;
+	overflow: hidden;
+	padding:3px;
+	background:#DDDDDD;
+}
+}
+	</style>
+</head>
+
+<body onload="javascript:alert('Best viewed in Google Chrome')"> 
+<div id = "tabs">
+<div id="header"><img class = "imag" src="images/logo.jpg"></a></div>
+	<h3 >&nbsp;Counter and Shift Register</h3>
+
+<div class="wrap">
+	<!-- experiment 3-->
+	<div class="wrap">
+		<ul class="tabs">
+			<li><a href="#">4Bit Binary Counter</a></li>
+			<li><a href="#">4Bit BCD Counter</a></li>
+			<li><a href="#">4Bit Johnson Counter</a></li> 
+			<li><a href="#">4Bit Ring Counter</a></li> 
+			<li><a href="#">4Bit Shift Register</a></li>
+			<!--<li><a href="#">Universal Shift Counter</a></li> -->
+		</ul>
+		<!-- 4Bit Binary Counter-->
+		<div class="pane"><h2  class="lable_title">4Bit Binary Counter</h2><br/>
+		<div style="border:2px solid;  border-radius:15px; width:90%; padding: 10px;">
+		<span id="hexoutput_bc" >Hexadecimal Output</span><br/>
+			<img id="b3_binary_counter"  src="images/lightbulb_up.png">
+			<img id="b2_binary_counter" src="images/lightbulb_up.png">
+			<img id="b1_binary_counter"  src="images/lightbulb_up.png">
+			<img id="b0_binary_counter"  src="images/lightbulb_up.png">
+			<span id="decimaloutput_bc" ></span>
+			<br/>
+			<button class="btn" id="start_bc" >START</button>
+			<button class="btn" id="stop_bc"  disabled=true>STOP</button>
+			<button class="btn" id="reset_bc"  disabled=true>RESET</button>
+			<button class="btn" id="manual_clock_bc" >Manual Clock</button>
+	   </div>
+			<div id="clock_binarycounter" style="position :relative; left :40px; top : 122px; width:30%; padding:5%">
+			<input id="cbc" class="range" type="range" style="font-size: 17x;font-weight: normal;position :absolute;left : -20px;top:-106px;" step="1" max="1000" min="0">
+			<label style="font-size: 17x;font-weight: normal;position :absolute;left : 51px;top:-106px;" for="cbc">Hz</label>
+			<label style="font-weight: normal; position: absolute; left: -12px; top: -76px;" for="cbc"> - clock (Auto)</label>
+			
+			</div>
+			<div style="width:67% ;margin-left:18%; margin-top:-70px">
+			<img id="binary_counter"  src="images/counter.png">
+			<br/>
+			<img id="binary_counter_graph"  src="images/binarycounter_tt.png">
+			<img id="binary_counter_graph" src="images/binarycounter_graph.png">
+			
+			
+			</div>
+		</div>
+		<!-- 4Bit BCD Counter-->
+		<div class="pane"><h2   class="lable_title">4Bit BCD Counter</h2>
+		<div style="border:2px solid;  border-radius:15px; width:90%; padding: 10px;">
+			<img id="b3_bcd_counter"  src="images/lightbulb_up.png">
+			<img id="b2_bcd_counter"  src="images/lightbulb_up.png">
+			<img id="b1_bcd_counter"  src="images/lightbulb_up.png">
+			<img id="b0_bcd_counter"  src="images/lightbulb_up.png">
+			<div id="decimaloutput_bcd1">	Decimal Output<br></div>
+			<span id="decimaloutput_bcd" ></span><br/>
+			<span id="clock_bcdcounter" ></span>
+			<button class="btn" id="start_bcd" >START</button>
+			<button class="btn" id="stop_bcd"  disabled=true>STOP</button>
+			<button class="btn" id="reset_bcd"  disabled=true>RESET</button>
+			<button class="btn" id="manual_clock_bcd" >Manual Clock</button>
+		</div>
+		     <div style="position :relative; left :40px; top : 122px; width:30%; padding:5%">
+				<input id="cbcdc" class="range" type="range"  step="1" max="1000" min="0"  style="font-size: 17x;font-weight: normal;position :absolute;left : -20px;top:-106px;">
+				<label style="font-size: 17x;font-weight: normal;position :absolute;left : 51px;top:-106px;" for="cbcdc">Hz</label>
+				<label style="font-weight: normal; position: absolute; left: -12px; top: -76px;" for="cbcdc"> - clock (Auto)</label>
+			
+			</div>
+			<div style="width:67% ;margin-left:18%; margin-top:-70px">
+			<img id="binary_counter"  src="images/bcdcounter.png">
+			<img id="binary_counter_graph"  src="images/bcdcounter_graph.png">
+			<img id="binary_counter_graph"  src="images/bcdcounter_tt.png">
+			
+			<!-- <input id="Doutput_bcd" type="text" disabled="true" size="1" name="Decimal Output" value=""> -->
+			
+			</div>
+		</div>
+		
+		<!-- 4Bit Johnson Counter-->
+		<div  class="pane"><h2 class="lable_title">4Bit Johnson Counter</h2>
+		<div style="border:2px solid;  border-radius:15px; width:90%; padding: 10px;">
+			<img id="b3_john_counter"  src="images/lightbulb_up.png">
+			<img id="b2_john_counter"  src="images/lightbulb_up.png">
+			<img id="b1_john_counter"  src="images/lightbulb_up.png">
+			<img id="b0_john_counter"  src="images/lightbulb_up.png">
+			<br/>
+			<button class="btn" id="start_john" >START</button>
+			<button class="btn" id="stop_john"  disabled=true>STOP</button>
+			<button class="btn" id="reset_john" disabled=true>RESET</button>
+			<button class="btn" id="manual_clock_john" >Manual Clock</button>
+		</div>
+			<div id="clock_johncounter" style="position :relative; left :40px; top : 122px; width:30%; padding:5%">
+				<input id="cjohnc" class="range" type="range" style="font-size: 17x;font-weight: normal;position :absolute;left : -20px;top:-106px;" step="1" max="1000" min="0">
+				<label style="font-size: 17x;font-weight: normal;position :absolute;left : 51px;top:-106px;" for="cjohnc">Hz</label>
+				<label style="font-weight: normal; position: absolute; left: -12px; top: -76px;" for="cbcdc"> - clock (Auto)</label>
+			
+			</div>
+			
+			<div style="width:67% ;margin-left:18%; margin-top:-70px">
+			<img id="john_counter" src="images/johncounter.png">
+			<img id="john_counter_graph"  src="images/johncounter_graph.png">
+			<img id="john_counter_graph"  src="images/johncounter_tt.png">
+			</div>
+			
+			
+		</div>
+		<!-- 4Bit Ring Counter-->
+		<div class = "pane" style="display: block; "><h2 class="lable_title">4Bit Ring Counter</h2>
+		<div style="border:2px solid;  border-radius:15px; width:90%; padding: 10px;">
+			<img id="b3_ring_counter"  src="images/lightbulb_up.png">
+			<img id="b2_ring_counter"  src="images/lightbulb_up.png">
+			<img id="b1_ring_counter"  src="images/lightbulb_up.png">
+			<img id="b0_ring_counter"  src="images/lightbulb_up.png">
+			<button class="btn" id="start_ring" >START</button>
+			<button class="btn" id="stop_ring"  disabled=true>STOP</button>
+			<button class="btn" id="reset_ring"  disabled=true>RESET</button>
+			<button class="btn" id="manual_clock_ring" >Manual Clock</button>
+		</div>
+			<div id="clock_ringcounter" style="position :relative; left :40px; top : 122px; width:30%; padding:5%">
+				<input id="cringc" class="range" type="range" style="font-size: 17x;font-weight: normal;position :absolute;left : -20px;top:-106px;" step="1" max="1000" min="0">
+				<label style="font-size: 17x;font-weight: normal;position :absolute;left : 51px;top:-106px;" for="cringc">Hz</label>
+				<label style="font-weight: normal; position: absolute; left: -12px; top: -76px;" for="cbcdc"> - clock (Auto)</label>
+			
+			</div>
+			
+			<div style="width:67% ;margin-left:18%; margin-top:-70px">
+			<img id="ring_counter"  src="images/ringcounter.png">
+			<img id="ring_counter_graph"  src="images/ringcounter_graph.png">
+			<img id="ring_counter_tt"  src="images/ringcounter_tt.png">
+			</div>
+		</div>
+		<div class = "pane" style="display: block; " border="1px"><h2 class="lable_title">4Bit Shift Register</h2>
+			
+			<div style="border:2px solid;  border-radius:15px; width:90%; padding: 10px;">
+			
+			<label > Serial Input</label>
+			<input id="txt_inputdata" size="4" maxlength="4"/>
+			<button class="btn" id="start_shift" >START</button>
+			<button class="btn" id="stop_shift"  disabled=true>STOP</button>
+			<button class="btn" id="reset_shift"  disabled=true>RESET</button>
+			<button class="btn" id="manual_clock_shift" >Manual Clock</button>
+			</div>
+			
+			<div id="clock_shiftregister" style="position :relative; left :40px; top : 122px; width:30%; padding:5%">
+				<input id="cshiftr" class="range" type="range" style="font-size: 17x;font-weight: normal;position :absolute;left : -20px;top:-106px;" step="1" max="1000" min="0">
+				<label style="font-size: 17x;font-weight: normal;position :absolute;left : 51px;top:-106px;" for="cshiftr">Hz</label>
+				<label style="font-weight: normal; position: absolute; left: -12px; top: -76px;" for="cbcdc"> - clock (Auto)</label>
+			
+			</div>
+			
+			<div style="width:67% ;margin-left:18%; margin-top:-70px">
+			<img id="b3_shift_register" style="position: absolute; top: 397px; left: 490px;" src="images/lightbulb_up.png">
+			<input id="b3_text" style="position: absolute; top: 404px; left: 526px;text-align: center;" size="1" maxlength="1" disabled="true"/>
+			<img id="b2_shift_register" style="position: absolute; top: 397px; left: 623px;" src="images/lightbulb_up.png">
+			<input id="b2_text" style="position: absolute; top: 404px; left: 659px;text-align: center;" size="1" maxlength="1" disabled="true"/>
+			<img id="b1_shift_register" style="position: absolute; top: 397px; left: 754px;" src="images/lightbulb_up.png">
+			<input id="b1_text" style="position: absolute; top: 403px; left: 789px;text-align: center;" size="1" maxlength="1" disabled="true"/>
+			<img id="b0_shift_register" style="position: absolute; top: 398px; left: 887px;" src="images/lightbulb_up.png">
+			<input id="b0_text" style="position: absolute; top: 403px; left: 922px;text-align: center;" size="1" maxlength="1" disabled="true"/>
+			
+			<img id="shift_register" style="position: absolute; top: 429px; left: 342px;" src="images/4bitshiftregister.png">
+			</div>
+			<img id="shift_register_graph" style="position: relative; top: 20%; " src="images/ringcounter_graph.png">
+			<img id="shift_register_tt"  style="position: relative; top: 20%; " src="images/4bitshiftreg_tt.png">
+			
+		</div>
+	</div>
+	</div>
+
+<div style=" width:100% text-align:center">
+<div class="art-footer">
+                <div class="art-footer-t"></div>
+                <div class="art-footer-l"></div>
+                <div class="art-footer-b"></div>
+                <div class="art-footer-r"></div>
+                <div class="art-footer-body">
+                    <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+					    <div class="art-footer-text">
+                               <p>Copyright &#169;2011.COEP Virtual Lab.</p>
+                                                            </div>
+                    <div class="cleared"></div>
+                </div>
+            </div>
+</div>
+
+
+
+</div>
+<script src="../assets/js/iframeResize.js"></script></body>
+
+</html>
