@@ -13,11 +13,10 @@ ul.tabs {
 
 #tabs{
 	box-shadow: 0 0 10px #000000;
-	margin-left: auto;
-    margin-right: auto;
-    width: 900px;
+	margin: 0 auto;
+    width: 100%;
 	font-size: 10px;
-	height: 850px;
+	height: 1000px;
 	overflow: hidden;
 	padding:3px;
 	background:#DDDDDD;
